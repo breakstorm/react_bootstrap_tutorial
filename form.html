@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>ReactJS chapter1</title>
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/react.min.js"></script> 
 	<script type="text/javascript" src="js/react-dom.min.js"></script> 
 	<script type="text/javascript" src="js/browser.min.js"></script> 
@@ -13,14 +13,31 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script> -->
 </head>
 <body>
-
 	<div id="hello"></div>
-
 	<script type="text/babel">
-		ReactDOM.render(
-			<h1>Hello, world!</h1>,
-			document.getElementById('hello')
-		)
+		var loginForm = 
+		<div className="container-fluid">
+			<div className="row">
+				<div className="col-lg-6">
+					<form>
+						<h1>Login Form</h1>
+						<hr/>
+						  <div className="form-group">
+							<label for="emailInput">Email address</label>
+							<input type="email" className="form-control" id="emailInput" placeholder="Email"/>
+						  </div>
+						  <div className="form-group">
+							<label for="passwordInput">Password</label>
+							<input type="password" className="form-control" id="passwordInput" placeholder="Password"/>
+						  </div>
+						  <button type="submit" className="btn btn-default col-xs-offset-9 col-xs-3">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		console.log(loginForm)
+		ReactDOM.render(loginForm, document.getElementById('hello'));
+
 	</script>
 </body>
 </html>
